@@ -36,11 +36,10 @@
         <script>
             $(document).ready(function() {
                 let input = document.getElementById('InputText');
-                const button = document.getElementById('ActionButton');
 
-                button.onclick(function() {
-                    console.log(input.value);
-                });
+                document.getElementById('ActionButton').onclick = function(){
+                    console.log(input.value)
+                }
 
                 
 

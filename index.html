@@ -36,11 +36,13 @@
         <script>
             $(document).ready(function() {
                 let input = document.getElementById('InputText');
-                const button = document.querySelector('ActionButton');
+                const button = document.getElementById('ActionButton');
 
-                button.addEventListener('click', event => {
-                    console.log(intput.value);
+                button.onclick(function() {
+                    console.log(input.value);
                 });
+
+                
 
             });
         </script>

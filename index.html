@@ -37,11 +37,20 @@
             $(document).ready(function() {
                 let input = document.getElementById('InputText');
 
-                document.getElementById('ActionButton').onclick = function(){
-                    console.log(input.value)
-                }
+                document.getElementById('ActionButton').onclick = processText
 
-                
+                function processText(){
+                    let text = input.value
+                    console.log(text)
+
+                    const count = (function (param) {
+                        console.log((param.match(/a/g) || []).length)
+                    })(text);
+
+                    const article = param => ['a', 'e', 'i', 'o', 'u'].indexOf(param.charAt(0).toLowerCase()) !== -1 ? 'an':'a'
+
+                    console.log(article(text))
+                }
 
             });
         </script>

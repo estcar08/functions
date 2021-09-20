@@ -36,9 +36,10 @@
         <script>
             $(document).ready(function() {
                 let input = document.getElementById('InputText');
-                
-                $("#ActionButton").click(function() {
-                    console.log(input.value);
+                const button = document.querySelector('ActionButton');
+
+                button.addEventListener('click', event => {
+                    console.log(intput.value);
                 });
 
             });

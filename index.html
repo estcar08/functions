@@ -36,22 +36,22 @@
         <script>
             $(document).ready(function() {
                 let input = document.getElementById('InputText');
-                document.getElementById('ActionButton').onclick = processText
+                document.getElementById('ActionButton').onclick = processText;
 
                 function processText(){
                     const text = input.value
                     if(text == null || text == ''){
                         alert("Please enter a word. Can’t be blank or empty !");
                     }else{
-                        console.log(text)
+                        console.log(text);
 
                         const count = (function (param) {
-                            console.log((param.match(/a/g) || []).length)
+                            console.log((param.match(/a/g) || []).length);
                         })(text);
 
-                        const article = param => ['a', 'e', 'i', 'o', 'u'].indexOf(param.charAt(0).toLowerCase()) !== -1 ? 'an':'a'
+                        const article = param => ['a', 'e', 'i', 'o', 'u'].indexOf(param.charAt(0).toLowerCase()) !== -1 ? 'an':'a';
 
-                        console.log(article(text))
+                        console.log(article(text));
                     }
                 }
             });
